@@ -37,8 +37,13 @@
         navLinks.forEach(function(link) {
             const linkPath = new URL(link.href).pathname;
             
+            // Special handling for Pope Leo XIV pages
+            if (linkPath === '/pope-leo-xiv-on-ai.html' && 
+                (currentPath.startsWith('/pope-leo-xiv/') || currentPath === '/pope-leo-xiv-on-ai.html')) {
+                link.classList.add('active');
+            }
             // Check for exact match or if we're on a subpage
-            if (linkPath === currentPath || 
+            else if (linkPath === currentPath || 
                 (linkPath !== '/' && currentPath.startsWith(linkPath.replace('.html', '')))) {
                 link.classList.add('active');
             }

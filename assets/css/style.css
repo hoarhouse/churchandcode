@@ -862,6 +862,29 @@ section > p:last-child {
     margin-bottom: 0;
 }
 
+/* Numbered points for structured arguments */
+.numbered-points {
+    margin: calc(var(--spacing) * 3) 0;
+}
+
+.numbered-points .point {
+    margin-bottom: calc(var(--spacing) * 4);
+}
+
+.numbered-points .point:last-child {
+    margin-bottom: 0;
+}
+
+.numbered-points h3 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    margin-bottom: calc(var(--spacing) * 1);
+}
+
+.numbered-points p {
+    margin-bottom: 0;
+}
+
 /* ==============================
    7. RESPONSIVE
    ============================== */
