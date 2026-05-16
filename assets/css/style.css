@@ -852,6 +852,16 @@ body {
     text-decoration: underline;
 }
 
+/* Ensure paragraphs inside content sections have spacing */
+.lede + section p,
+section > p {
+    margin-bottom: calc(var(--spacing) * 3);
+}
+
+section > p:last-child {
+    margin-bottom: 0;
+}
+
 /* ==============================
    7. RESPONSIVE
    ============================== */
