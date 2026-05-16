@@ -835,6 +835,23 @@ body {
     text-decoration: underline;
 }
 
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    font-size: var(--font-size-base);
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
 /* ==============================
    7. RESPONSIVE
    ============================== */
