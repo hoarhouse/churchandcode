@@ -391,74 +391,70 @@ body {
     color: var(--color-text-secondary);
 }
 
-/* Newsletter */
-.newsletter {
-    padding: calc(var(--spacing) * 12) calc(var(--spacing) * 3);
-    background: var(--color-bg);
+/* Pope Leo XIV Resources Section */
+.leo-resources {
+    padding: calc(var(--spacing) * 10) calc(var(--spacing) * 3);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 }
 
-.newsletter-container {
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.newsletter-title {
-    font-size: var(--font-size-4xl);
+.leo-resources h2 {
+    font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
-    letter-spacing: -0.003em;
+    text-align: center;
     margin-bottom: calc(var(--spacing) * 2);
     color: var(--color-text);
 }
 
-.newsletter-text {
+.leo-resources .section-intro {
     font-size: var(--font-size-xl);
-    line-height: 1.38;
+    text-align: center;
     color: var(--color-text-secondary);
-    margin-bottom: calc(var(--spacing) * 5);
+    margin-bottom: calc(var(--spacing) * 6);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.newsletter-form {
-    display: flex;
-    gap: calc(var(--spacing) * 2);
-    max-width: 500px;
+.resources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: var(--container-max);
     margin: 0 auto;
 }
 
-.newsletter-form input {
-    flex: 1;
-    padding: 12px 16px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    font-size: var(--font-size-base);
-    font-family: var(--font-system);
-    background: var(--color-surface);
-    color: var(--color-text);
+.resources-list li {
+    padding: calc(var(--spacing) * 3);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.resources-list li:last-child {
+    border-bottom: none;
+}
+
+.resources-list h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: calc(var(--spacing) * 1.5);
+}
+
+.resources-list h3 a {
+    color: var(--color-primary);
+    text-decoration: none;
     transition: var(--transition);
 }
 
-.newsletter-form input:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 4px var(--color-focus-ring);
+.resources-list h3 a:hover {
+    text-decoration: underline;
 }
 
-.newsletter-form button {
-    padding: 12px 24px;
-    background: var(--color-primary);
-    color: white;
-    border: none;
-    border-radius: var(--radius-md);
+.resources-list p {
     font-size: var(--font-size-base);
-    font-weight: var(--font-weight-normal);
-    font-family: var(--font-system);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.newsletter-form button:hover {
-    background: var(--color-primary-hover);
-    transform: translateY(-1px);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-normal);
+    margin: 0;
 }
 
 /* Footer */
@@ -932,13 +928,8 @@ section > p:last-child {
         grid-template-columns: 1fr;
     }
 
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form input,
-    .newsletter-form button {
-        width: 100%;
+    .resources-list li {
+        padding: calc(var(--spacing) * 2);
     }
     
     .article-title {
