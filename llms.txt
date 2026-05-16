@@ -10,6 +10,7 @@ Chris Hoar: works with European enterprise AI companies across the US and Europe
 
 - [Pope Leo XIV on Artificial Intelligence](https://churchandcode.com/pope-leo-xiv-on-ai.html): Complete record of every major statement Pope Leo XIV has made on AI, May 2025 onward.
 - [Pope Leo XIV: Everything You Need to Know (in 5 Minutes)](https://churchandcode.com/pope-leo-xiv/explained.html): First American pope, former mathematician, and his AI agenda. A 5-minute briefing on the basics.
+- [The Five Biggest Ideas in Pope Leo XIV's AI Teaching](https://churchandcode.com/pope-leo-xiv/biggest-ideas.html): A synthesis distilling Pope Leo XIV's emerging AI doctrine into five core ideas, with sources, drawn from his speeches and messages through May 2026.
 - [Why Did Pope Leo XIV Choose His Name?](https://churchandcode.com/pope-leo-xiv/why-the-name.html): Explains why Pope Leo XIV took his name in response to AI, the Rerum Novarum parallel, and what it signals for his papacy.
 - [Pope Leo XIV's First AI Encyclical](https://churchandcode.com/pope-leo-xiv-on-ai/encyclical.html): Tracking page for the encyclical signed May 15, 2026.
 - [A Catholic Framework for Evaluating AI Tools](https://churchandcode.com/framework.html): Original framework for evaluating AI tools against Catholic teaching.
