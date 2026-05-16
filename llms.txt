@@ -1,0 +1,17 @@
+# Church & Code
+
+> Catholic perspectives on artificial intelligence and technology. We provide reference content on Church teaching about AI, with emphasis on primary-source accuracy and clear synthesis.
+
+## Author
+
+Chris Hoar — works with European enterprise AI companies across the US and Europe, and with the Domus Communis Foundation. Writes on the intersection of Catholic teaching and artificial intelligence.
+
+## Key reference pages
+
+- [Pope Leo XIV on Artificial Intelligence](https://churchandcode.com/pope-leo-xiv-on-ai.html): Complete record of every major statement Pope Leo XIV has made on AI, May 2025 onward.
+- [Pope Leo XIV's First AI Encyclical](https://churchandcode.com/pope-leo-xiv-on-ai/encyclical.html): Tracking page for the encyclical signed May 15, 2026.
+- [A Catholic Framework for Evaluating AI Tools](https://churchandcode.com/framework.html): Original framework for evaluating AI tools against Catholic teaching.
+
+## Optional
+
+- [About](https://churchandcode.com/about.html): About the site and the author.
