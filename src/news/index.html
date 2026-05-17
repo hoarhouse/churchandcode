@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: "News | Church & Code"
+description: "News and commentary on the Catholic Church and artificial intelligence."
+keywords: "Catholic AI news, Pope Leo XIV news, AI ethics news"
+canonical: "https://churchandcode.com/news/"
+ogType: "website"
+ogTitle: "News | Church & Code"
+ogDescription: "News and commentary on the Catholic Church and artificial intelligence."
+permalink: /news/index.html
+---
+<main class="article">
+    <header class="article-header">
+        <h1 class="article-title">News</h1>
+        <p class="article-subtitle">Commentary on Catholic teaching and the AI moment.</p>
+    </header>
+
+    <section class="news-list">
+        {% if collections.news.length > 0 %}
+        <ul class="cluster-list">
+            {% for page in collections.news %}
+            <li class="cluster-item">
+                <h3><a href="{{ page.url }}">{{ page.data.ogTitle or page.data.title }}</a></h3>
+                {% if page.data.date %}
+                <p class="news-date">{{ page.date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) }}</p>
+                {% endif %}
+                <p>{{ page.data.summary or page.data.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No news articles yet. Check back soon.</p>
+        {% endif %}
+    </section>
+</main>

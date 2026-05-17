@@ -35,6 +35,13 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => (b.data.date || 0) - (a.data.date || 0));
   });
 
+  // News collection: any page with `category: news` in front matter
+  eleventyConfig.addCollection("news", function(collectionApi) {
+    return collectionApi.getAll()
+      .filter(item => item.data.category === "news")
+      .sort((a, b) => (b.data.date || 0) - (a.data.date || 0));
+  });
+
   return {
     dir: {
       input: "src",
