@@ -970,4 +970,105 @@ section > p:last-child {
         padding-left: calc(var(--spacing) * 2);
         border-left-width: 3px;
     }
+}/* ============================================================
+   Cluster system styles (added for dynamic homepage, May 2026)
+   Append these to the end of style.css
+   ============================================================ */
+
+/* Hero eyebrow (small text above hero title) */
+.hero-eyebrow {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+/* Cluster sections on homepage */
+.cluster-section {
+    max-width: calc(var(--container-max) * 0.82);
+    margin: 0 auto;
+    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 3);
+    border-top: 1px solid var(--color-border);
+}
+
+.cluster-section:first-of-type {
+    border-top: none;
+}
+
+.cluster-header {
+    margin-bottom: calc(var(--spacing) * 5);
+}
+
+.cluster-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.003em;
+    margin-bottom: calc(var(--spacing) * 2);
+    color: var(--color-text);
+}
+
+.cluster-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    max-width: 720px;
+}
+
+.cluster-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing) * 4);
+}
+
+.cluster-item {
+    padding: 0;
+}
+
+.cluster-item h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.002em;
+    margin: 0 0 calc(var(--spacing) * 1) 0;
+}
+
+.cluster-item h3 a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.cluster-item h3 a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.cluster-item p {
+    font-size: var(--font-size-base);
+    line-height: 1.55;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Empty-state clusters: visually de-emphasized */
+.cluster-empty-state {
+    opacity: 0.55;
+}
+
+.cluster-empty {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Responsive: side-by-side items on wider screens */
+@media (min-width: 720px) {
+    .cluster-list {
+        grid-template-columns: 1fr 1fr;
+        gap: calc(var(--spacing) * 4) calc(var(--spacing) * 6);
+    }
 }

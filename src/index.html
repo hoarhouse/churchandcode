@@ -1,59 +1,170 @@
 ---
 layout: base.njk
-title: "Church & Code | Where Faith Meets the Future of Intelligence"
-description: "Catholic perspectives on AI ethics, artificial intelligence, and technology. Following Pope Leo XIV's vision for human dignity in the digital age."
-keywords: "Pope Leo XIV, AI ethics, Catholic Church artificial intelligence, technology ethics, Church and AI"
+title: "Church & Code | Catholic perspectives on AI ethics"
+description: "Catholic perspectives on AI ethics. A reference site for the AI moment, written for tech-curious readers and Catholic ones alike. Every page sourced, no fluff."
+keywords: "Catholic AI ethics, Pope Leo XIV, AI and the Church, Catholic teaching on artificial intelligence, AI ethics reference"
 canonical: "https://churchandcode.com/"
 ogType: "website"
-ogTitle: "Church & Code | Where Faith Meets the Future of Intelligence"
-ogDescription: "Catholic perspectives on AI ethics and technology."
+ogTitle: "Church & Code | Catholic perspectives on AI ethics"
+ogDescription: "A reference site for the AI moment. Every page sourced, no fluff."
 schema: |
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Church & Code",
-      "url": "https://churchandcode.com",
-      "description": "Catholic perspectives on AI ethics and technology"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://churchandcode.com/#website",
+          "name": "Church & Code",
+          "url": "https://churchandcode.com",
+          "description": "Catholic perspectives on AI ethics. A reference site for the AI moment, written for tech-curious readers and Catholic ones alike."
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://churchandcode.com/#organization",
+          "name": "Church & Code",
+          "url": "https://churchandcode.com",
+          "founder": { "@id": "https://churchandcode.com/about.html#chris-hoar" }
+        }
+      ]
     }
 ---
 <!-- Hero -->
 <section class="hero">
     <div class="hero-content">
-        <h1 class="hero-title">Where faith meets the future of intelligence!</h1>
-        <p class="hero-subtitle">Catholic perspectives on AI ethics and human dignity in the digital age</p>
+        <p class="hero-eyebrow">Catholic perspectives on AI ethics.</p>
+        <h1 class="hero-title">What the Church actually teaches about artificial intelligence.</h1>
+        <p class="hero-subtitle">A reference site for the AI moment, written for tech-curious readers and Catholic ones alike. Every page sourced, no fluff.</p>
         <div class="hero-buttons">
-            <a href="/framework.html" class="btn-primary">Explore the Framework</a>
-            <a href="/pope-leo-xiv-on-ai.html" class="btn-secondary">Pope Leo XIV on AI →</a>
+            <a href="/pope-leo-xiv-on-ai.html" class="btn-primary">Start with Pope Leo XIV</a>
+            <a href="/framework.html" class="btn-secondary">The framework →</a>
         </div>
     </div>
 </section>
 
-<!-- Pope Leo XIV Resources -->
-<section class="leo-resources">
-    <h2>Pope Leo XIV on AI: complete coverage</h2>
-    <p class="section-intro">A reference series on the first pope to make artificial intelligence the defining theme of his papacy.</p>
-    <ul class="resources-list">
-        <li>
-            <h3><a href="/pope-leo-xiv-on-ai.html">Every Major Statement</a></h3>
-            <p>The complete sourced record of Pope Leo XIV's AI statements from May 2025 onward.</p>
+<!-- Cluster: Pope Leo XIV -->
+{% set clusterPages = collections["pope-leo-xiv"] %}
+<section class="cluster-section">
+    <div class="cluster-header">
+        <h2 class="cluster-title">Pope Leo XIV</h2>
+        <p class="cluster-intro">The first pope to make artificial intelligence the defining theme of his papacy. Every major statement, every source.</p>
+    </div>
+    {% if clusterPages.length > 0 %}
+    <ul class="cluster-list">
+        {% for page in clusterPages %}
+        <li class="cluster-item">
+            <h3><a href="{{ page.url }}">{{ page.data.ogTitle or page.data.title }}</a></h3>
+            <p>{{ page.data.summary }}</p>
         </li>
-        <li>
-            <h3><a href="/pope-leo-xiv/explained.html">Pope Leo XIV in 5 Minutes</a></h3>
-            <p>The first American pope, a former mathematician, his background and his AI agenda.</p>
-        </li>
-        <li>
-            <h3><a href="/pope-leo-xiv/why-the-name.html">Why He Chose the Name "Leo"</a></h3>
-            <p>The <em>Rerum Novarum</em> parallel, explained with primary sources.</p>
-        </li>
-        <li>
-            <h3><a href="/pope-leo-xiv/biggest-ideas.html">The Five Biggest Ideas</a></h3>
-            <p>A synthesis of Pope Leo XIV's emerging AI doctrine.</p>
-        </li>
-        <li>
-            <h3><a href="/pope-leo-xiv-on-ai/encyclical.html">The Forthcoming Encyclical</a></h3>
-            <p>Tracking page for Pope Leo XIV's first encyclical, signed May 15, 2026.</p>
-        </li>
+        {% endfor %}
     </ul>
+    {% else %}
+    <p class="cluster-empty">Coming soon.</p>
+    {% endif %}
+</section>
+
+<!-- Cluster: AI and being human -->
+{% set clusterPages = collections["ai-and-being-human"] %}
+<section class="cluster-section">
+    <div class="cluster-header">
+        <h2 class="cluster-title">AI and being human</h2>
+        <p class="cluster-intro">What AI does to us. Soul, consciousness, dignity, relationships. The questions underneath the ethics.</p>
+    </div>
+    {% if clusterPages.length > 0 %}
+    <ul class="cluster-list">
+        {% for page in clusterPages %}
+        <li class="cluster-item">
+            <h3><a href="{{ page.url }}">{{ page.data.ogTitle or page.data.title }}</a></h3>
+            <p>{{ page.data.summary }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="cluster-empty">Coming soon.</p>
+    {% endif %}
+</section>
+
+<!-- Cluster: AI and kids -->
+{% set clusterPages = collections["ai-and-kids"] %}
+<section class="cluster-section cluster-empty-state">
+    <div class="cluster-header">
+        <h2 class="cluster-title">AI and kids</h2>
+        <p class="cluster-intro">Schools, chatbot companions, homework. What Catholic teaching says about raising children in the age of AI.</p>
+    </div>
+    {% if clusterPages.length > 0 %}
+    <ul class="cluster-list">
+        {% for page in clusterPages %}
+        <li class="cluster-item">
+            <h3><a href="{{ page.url }}">{{ page.data.ogTitle or page.data.title }}</a></h3>
+            <p>{{ page.data.summary }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="cluster-empty">Coming summer 2026.</p>
+    {% endif %}
+</section>
+
+<!-- Cluster: AI and work -->
+{% set clusterPages = collections["ai-and-work"] %}
+<section class="cluster-section cluster-empty-state">
+    <div class="cluster-header">
+        <h2 class="cluster-title">AI and work</h2>
+        <p class="cluster-intro">Jobs, vocation, the theology of work. What happens to meaning when the machines can do what we do.</p>
+    </div>
+    {% if clusterPages.length > 0 %}
+    <ul class="cluster-list">
+        {% for page in clusterPages %}
+        <li class="cluster-item">
+            <h3><a href="{{ page.url }}">{{ page.data.ogTitle or page.data.title }}</a></h3>
+            <p>{{ page.data.summary }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="cluster-empty">Coming summer 2026.</p>
+    {% endif %}
+</section>
+
+<!-- Cluster: AI and the world -->
+{% set clusterPages = collections["ai-and-the-world"] %}
+<section class="cluster-section cluster-empty-state">
+    <div class="cluster-header">
+        <h2 class="cluster-title">AI and the world</h2>
+        <p class="cluster-intro">Environment, deepfakes, weapons, bias. The civilizational questions AI raises and what the Church has to say.</p>
+    </div>
+    {% if clusterPages.length > 0 %}
+    <ul class="cluster-list">
+        {% for page in clusterPages %}
+        <li class="cluster-item">
+            <h3><a href="{{ page.url }}">{{ page.data.ogTitle or page.data.title }}</a></h3>
+            <p>{{ page.data.summary }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="cluster-empty">Coming August 2026.</p>
+    {% endif %}
+</section>
+
+<!-- Cluster: Reference -->
+{% set clusterPages = collections["reference"] %}
+<section class="cluster-section">
+    <div class="cluster-header">
+        <h2 class="cluster-title">Reference</h2>
+        <p class="cluster-intro">The foundational documents and frameworks. The reading list for anyone serious about Catholic AI ethics.</p>
+    </div>
+    {% if clusterPages.length > 0 %}
+    <ul class="cluster-list">
+        {% for page in clusterPages %}
+        <li class="cluster-item">
+            <h3><a href="{{ page.url }}">{{ page.data.ogTitle or page.data.title }}</a></h3>
+            <p>{{ page.data.summary }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="cluster-empty">Coming soon.</p>
+    {% endif %}
 </section>
 
 <!-- Quote -->
@@ -61,37 +172,6 @@ schema: |
     <div class="quote-container">
         <p class="quote-text">"Don't let the algorithm write your story."</p>
         <p class="quote-author">Pope Leo XIV</p>
-    </div>
-</section>
-
-<!-- Latest -->
-<section id="latest" class="latest">
-    <div class="section-container">
-        <h2 class="section-title">Latest</h2>
-
-        <div class="cards">
-            <!-- Featured Card -->
-            <article class="card card-featured">
-                <span class="card-label">Featured</span>
-                <h3 class="card-title">Don't let the algorithm write your story</h3>
-                <p class="card-description">Pope Leo XIV challenges young people to reclaim autonomy from algorithmic control and cultivate their interior lives.</p>
-                <a href="/news/pope-leo-warns-algorithms.html" class="card-link">Read more</a>
-            </article>
-
-            <!-- Card 2 -->
-            <article class="card">
-                <h3 class="card-title">The Church & Code Framework</h3>
-                <p class="card-description">Understanding the Catholic Church's position on artificial intelligence and human dignity.</p>
-                <a href="/framework.html" class="card-link">Explore</a>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="card">
-                <h3 class="card-title">Pope Leo XIV on Artificial Intelligence</h3>
-                <p class="card-description">Every major statement from the first American pope on AI, from May 2025 to today.</p>
-                <a href="/pope-leo-xiv-on-ai.html" class="card-link">Read all statements</a>
-            </article>
-        </div>
     </div>
 </section>
 

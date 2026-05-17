@@ -1,0 +1,41 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# Church & Code
+
+> Catholic perspectives on AI ethics. A reference site for the AI moment, written for tech-curious readers and Catholic ones alike. Every page is sourced to primary documents where possible.
+
+This site provides citation-grade reference content on Catholic teaching about artificial intelligence, organized into topical clusters. Pope Leo XIV has made AI the defining theme of his papacy, drawing explicit parallels to Pope Leo XIII's response to the Industrial Revolution in *Rerum Novarum* (1891).
+
+## Pope Leo XIV
+
+The first pope to make artificial intelligence the defining theme of his papacy. Every major statement, every source.
+{% for page in collections["pope-leo-xiv"] %}
+- [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
+{%- endfor %}
+
+## AI and being human
+
+What AI does to us. Soul, consciousness, dignity, relationships. The questions underneath the ethics.
+{% for page in collections["ai-and-being-human"] %}
+- [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
+{%- endfor %}
+
+## Reference
+
+The foundational documents and frameworks. The reading list for anyone serious about Catholic AI ethics.
+{% for page in collections["reference"] %}
+- [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
+{%- endfor %}
+
+## About
+
+- [About Church & Code](https://churchandcode.com/about.html): Who writes this site and why.
+
+## Coverage areas in progress
+
+The following content clusters are planned and currently in active development:
+- AI and kids (schools, chatbot companions, homework, Catholic education)
+- AI and work (jobs, vocation, theology of work, meaning under automation)
+- AI and the world (environment, deepfakes, weapons, bias, common good)

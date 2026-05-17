@@ -1,0 +1,22 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all -%}
+{%- if not page.data.eleventyExcludeFromCollections %}
+    <url>
+        <loc>https://churchandcode.com{{ page.url }}</loc>
+{%- if page.data.date %}
+        <lastmod>{{ page.date.toISOString().split("T")[0] }}</lastmod>
+{%- endif %}
+{%- if page.data.cluster %}
+        <priority>0.8</priority>
+{%- else %}
+        <priority>0.5</priority>
+{%- endif %}
+    </url>
+{%- endif -%}
+{%- endfor %}
+</urlset>
