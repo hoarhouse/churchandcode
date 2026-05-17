@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    {%- if author %}
+    <meta name="author" content="{{ author }}">
+    {%- endif %}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="{{ ogType or 'website' }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:title" content="{{ ogTitle or title }}">
+    <meta property="og:description" content="{{ ogDescription or description }}">
+    <meta property="og:site_name" content="Church & Code">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="{{ twitterCard or 'summary' }}">
+    <meta name="twitter:title" content="{{ twitterTitle or ogTitle or title }}">
+    <meta name="twitter:description" content="{{ twitterDescription or ogDescription or description }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ canonical }}">
+
+    {%- if schema %}
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+{{ schema | safe }}
+    </script>
+    {%- endif %}
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Church & Code</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/framework.html">Framework</a></li>
+                <li><a href="/news/">News</a></li>
+                <li><a href="/pope-leo-xiv-on-ai.html">Pope Leo XIV</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {{ content | safe }}
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">Church & Code</p>
+            <p class="footer-copyright">© 2026 Church & Code. Catholic perspectives on AI ethics.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/nav.js" defer></script>
+</body>
+</html>
