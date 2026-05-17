@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}">
+    {%- if keywords %}
+    <meta name="keywords" content="{{ keywords }}">
+    {%- endif %}
     {%- if author %}
     <meta name="author" content="{{ author }}">
     {%- endif %}
@@ -15,6 +18,13 @@
     <meta property="og:title" content="{{ ogTitle or title }}">
     <meta property="og:description" content="{{ ogDescription or description }}">
     <meta property="og:site_name" content="Church & Code">
+
+    {%- if articleAuthor %}
+    <!-- Article metadata -->
+    <meta property="article:author" content="{{ articleAuthor }}">
+    <meta property="article:published_time" content="{{ articlePublishedTime }}">
+    <meta property="article:modified_time" content="{{ articleModifiedTime or articlePublishedTime }}">
+    {%- endif %}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="{{ twitterCard or 'summary' }}">
