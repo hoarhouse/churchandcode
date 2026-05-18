@@ -29,6 +29,13 @@ The foundational documents and frameworks. The reading list for anyone serious a
 - [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
 {%- endfor %}
 
+## News
+
+Commentary and news coverage on the Catholic Church and AI.
+{% for page in collections.news %}
+- [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
+{%- endfor %}
+
 ## About
 
 - [About Church & Code](https://churchandcode.com/about.html): Who writes this site and why.
