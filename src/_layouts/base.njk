@@ -18,6 +18,10 @@
     <meta property="og:title" content="{{ ogTitle or title }}">
     <meta property="og:description" content="{{ ogDescription or description }}">
     <meta property="og:site_name" content="Church & Code">
+    <meta property="og:image" content="{{ ogImage or 'https://churchandcode.com/assets/og-image.jpg' }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ ogImageAlt or 'Church & Code. Catholic perspectives on artificial intelligence.' }}">
 
     {%- if articleAuthor %}
     <!-- Article metadata -->
@@ -27,9 +31,11 @@
     {%- endif %}
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="{{ twitterCard or 'summary' }}">
+    <meta name="twitter:card" content="{{ twitterCard or 'summary_large_image' }}">
     <meta name="twitter:title" content="{{ twitterTitle or ogTitle or title }}">
     <meta name="twitter:description" content="{{ twitterDescription or ogDescription or description }}">
+    <meta name="twitter:image" content="{{ twitterImage or ogImage or 'https://churchandcode.com/assets/og-image.jpg' }}">
+    <meta name="twitter:image:alt" content="{{ ogImageAlt or 'Church & Code. Catholic perspectives on artificial intelligence.' }}">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ canonical }}">
