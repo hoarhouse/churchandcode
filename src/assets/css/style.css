@@ -1128,3 +1128,34 @@ section > p:last-child {
         padding: calc(var(--spacing) * 2);
     }
 }
+
+/* Article blockquotes */
+.article blockquote {
+    margin: calc(var(--spacing) * 5) 0;
+    padding: calc(var(--spacing) * 2) 0 calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+    border-left: 3px solid var(--color-border);
+    font-style: italic;
+    color: var(--color-text);
+}
+
+.article blockquote p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-normal);
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+.article blockquote p:last-of-type {
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+.article blockquote cite {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-style: normal;
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+}
+
+.article blockquote cite::before {
+    content: "";
+}
