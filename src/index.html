@@ -85,7 +85,7 @@ schema: |
 
 <!-- Cluster: AI and kids -->
 {% set clusterPages = collections["ai-and-kids"] %}
-<section class="cluster-section cluster-empty-state">
+<section class="cluster-section{% if clusterPages.length == 0 %} cluster-empty-state{% endif %}">
     <div class="cluster-header">
         <h2 class="cluster-title">AI and kids</h2>
         <p class="cluster-intro">Schools, chatbot companions, homework. What Catholic teaching says about raising children in the age of AI.</p>
@@ -106,7 +106,7 @@ schema: |
 
 <!-- Cluster: AI and work -->
 {% set clusterPages = collections["ai-and-work"] %}
-<section class="cluster-section cluster-empty-state">
+<section class="cluster-section{% if clusterPages.length == 0 %} cluster-empty-state{% endif %}">
     <div class="cluster-header">
         <h2 class="cluster-title">AI and work</h2>
         <p class="cluster-intro">Jobs, vocation, the theology of work. What happens to meaning when the machines can do what we do.</p>
@@ -127,7 +127,7 @@ schema: |
 
 <!-- Cluster: AI and the world -->
 {% set clusterPages = collections["ai-and-the-world"] %}
-<section class="cluster-section cluster-empty-state">
+<section class="cluster-section{% if clusterPages.length == 0 %} cluster-empty-state{% endif %}">
     <div class="cluster-header">
         <h2 class="cluster-title">AI and the world</h2>
         <p class="cluster-intro">Environment, deepfakes, weapons, bias. The civilizational questions AI raises and what the Church has to say.</p>
