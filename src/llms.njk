@@ -36,6 +36,13 @@ Jobs, vocation, the theology of work. What happens to meaning when the machines 
 - [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
 {%- endfor %}
 
+## AI and the world
+
+Environment, deepfakes, weapons, bias. The civilizational questions AI raises and what the Church has to say.
+{% for page in collections["ai-and-the-world"] %}
+- [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
+{%- endfor %}
+
 ## Reference
 
 The foundational documents and frameworks. The reading list for anyone serious about Catholic AI ethics.
@@ -54,7 +61,3 @@ Commentary and news coverage on the Catholic Church and AI.
 
 - [About Church & Code](https://churchandcode.com/about.html): Who writes this site and why.
 
-## Coverage areas in progress
-
-The following content clusters are planned and currently in active development:
-- AI and the world (environment, deepfakes, weapons, bias, common good)
