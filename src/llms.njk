@@ -29,6 +29,13 @@ Schools, chatbot companions, homework. What Catholic teaching says about raising
 - [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
 {%- endfor %}
 
+## AI and work
+
+Jobs, vocation, the theology of work. What happens to meaning when the machines can do what we do.
+{% for page in collections["ai-and-work"] %}
+- [{{ (page.data.ogTitle or page.data.title) | safe }}](https://churchandcode.com{{ page.url }}): {{ page.data.summary | safe }}
+{%- endfor %}
+
 ## Reference
 
 The foundational documents and frameworks. The reading list for anyone serious about Catholic AI ethics.
@@ -50,5 +57,4 @@ Commentary and news coverage on the Catholic Church and AI.
 ## Coverage areas in progress
 
 The following content clusters are planned and currently in active development:
-- AI and work (jobs, vocation, theology of work, meaning under automation)
 - AI and the world (environment, deepfakes, weapons, bias, common good)
