@@ -8,10 +8,14 @@ eleventyExcludeFromCollections: true
 {%- if not page.data.eleventyExcludeFromCollections %}
     <url>
         <loc>https://churchandcode.com{{ page.url }}</loc>
-{%- if page.data.date %}
+{%- if page.data.articleModifiedTime %}
+        <lastmod>{{ page.data.articleModifiedTime.split("T")[0] }}</lastmod>
+{%- elif page.data.date %}
         <lastmod>{{ page.date.toISOString().split("T")[0] }}</lastmod>
 {%- endif %}
-{%- if page.data.cluster %}
+{%- if page.url == "/" %}
+        <priority>1.0</priority>
+{%- elif page.data.cluster %}
         <priority>0.8</priority>
 {%- else %}
         <priority>0.5</priority>
