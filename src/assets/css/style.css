@@ -887,6 +887,7 @@ section > p:last-child {
 
 @media (max-width: 768px) {
     .nav-links {
+        display: none;
         gap: calc(var(--spacing) * 2);
         font-size: var(--font-size-xs);
     }
