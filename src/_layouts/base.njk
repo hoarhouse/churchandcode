@@ -49,9 +49,21 @@
 
     {%- if schema %}
     <!-- Schema.org JSON-LD -->
+    {%- if schema[0] and schema[0]["@context"] %}
+    {%- for item in schema %}
+    <script type="application/ld+json">
+{{ item | dump | safe }}
+    </script>
+    {%- endfor %}
+    {%- elif schema["@context"] %}
+    <script type="application/ld+json">
+{{ schema | dump | safe }}
+    </script>
+    {%- else %}
     <script type="application/ld+json">
 {{ schema | safe }}
     </script>
+    {%- endif %}
     {%- endif %}
 
     <link rel="stylesheet" href="/assets/css/style.css">
