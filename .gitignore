@@ -4,3 +4,6 @@ _site/
 .vscode/
 .idea/
 npm-debug.log*
+_backups/
+*.bak
+_backups/
